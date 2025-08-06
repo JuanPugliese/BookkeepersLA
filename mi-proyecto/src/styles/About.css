@@ -9,21 +9,30 @@
 .about-section .about-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 40px;          /* tamaño fijo en px */
   color: #213BA1;
-  margin-bottom: 1.5rem;
   text-align: center;
-  font-size: 40px;
+
+  /* Eleva solo el título */
+  margin-top: -45px;        /* ajusta este valor hasta dejarlo a la altura deseada */
+  margin-bottom: 1.0rem;    /* separa el párrafo siguiente */
 }
 
-/* Texto descriptivo */
 .about-section .about-text {
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  font-weight: 100;        /* Regular, o cambia a 500 si usas Roboto Medium */
+  font-size: 24px;         /* tamaño de fuente */
+  line-height: 40px;       /* altura de línea */
+  letter-spacing: 0;       /* espaciado de letra */
+  color: #000000;          /* negro puro */
+  
+  
+  /* Caja de texto de ancho fijo */
+  max-width: 650px;        /* tal como indica Figma */
+  width: 100%;             /* pero que se adapte en móviles */
+  
+  text-align: justify;
 }
-
 /* Frase final en negrita */
 .about-section .about-text .highlight {
   font-weight: 600;
@@ -34,7 +43,7 @@
 /* Imagen con borde azul y esquinas redondeadas */
 .about-section .about-image {
   width: 100%;
-  max-width: 400px;         /* ajusta este valor si quieres otro tamaño */
+  max-width: 400px;
   border: 8px solid #213BA1;
   border-radius: 20px;
   object-fit: cover;

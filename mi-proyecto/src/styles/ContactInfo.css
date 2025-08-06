@@ -1,0 +1,19 @@
+/* src/styles/ContactInfo.css */
+.contact-info-section {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+.contact-info-section .contact-details h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+.contact-info-section .contact-details p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}

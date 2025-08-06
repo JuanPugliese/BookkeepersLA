@@ -11,11 +11,10 @@ export default function About() {
         <Row className="align-items-center">
           {/* Columna de texto */}
           <Col md={6}>
-            <h2 className="about-title">About us</h2>
+            <h2 className="about-title">About Us</h2>
             <div className="about-text">
               <p>
-                We provide reliable and accurate bookkeeping services tailored to small businesses,
-                with a focus on dental offices and landscaping companies. Our goal is to simplify
+                We provide reliable and accurate bookkeeping services tailored to small businesses. Our goal is to simplify
                 your financial processes, keep your books organized, and give you the clarity you
                 need to grow your business. With a commitment to professionalism and personalized
                 service, we’re here to help you save time, reduce stress, and focus on what you do best.

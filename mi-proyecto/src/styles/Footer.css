@@ -1,0 +1,24 @@
+/* src/styles/Footer.css */
+.main-footer {
+  background-color: #213BA1;
+  padding: 2rem 0;
+}
+.footer-link a {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+.linkedin-icon {
+  height: 50px;
+  width: auto;
+  margin-right: 0.5rem;
+}
+.footer-seals .seal-image {
+  height: 100px;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
