@@ -1,0 +1,20 @@
+.navbar-custom {
+  background-color: #ffffff;  /* fondo blanco */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.75rem 1rem;
+}
+
+.navbar-custom .navbar-brand img {
+  height: 70px;               /* ajusta al tamaño que prefieras */
+  margin-right: 0.5rem;
+}
+
+.navbar-custom .nav-link {
+  margin: 0 1rem;
+  font-weight: 500;
+  color: #333333 !important;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #0056b3 !important;
+}

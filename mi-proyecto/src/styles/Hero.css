@@ -1,0 +1,71 @@
+/* src/styles/Hero.css */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay azul al 60 % cubriendo todo el hero */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Azul 35,83,239 al 60% de opacidad */
+  background: rgba(35, 83, 239, 0.4);
+}
+
+/* Contenido encima del overlay */
+.hero-content {
+  position: relative;         
+  width: 100%;                /* ocupa todo el ancho disponible */
+  max-width: none;            
+  padding: 0 2rem;            /* deja un poco de margen lateral */
+  text-align: center;         
+  color: #fff;                
+}
+
+/* Título */
+/* Título responsivo */
+/* Título responsivo y centrado (igual que antes) */
+.hero-content h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 80px);
+  line-height: clamp(2.5rem, 6vw, 100px);
+  margin-bottom: 1rem;
+}
+
+/* Subtítulo a lo largo de toda la imagen */
+.hero-content p {
+  /* Tipografía Roboto Medium 24px */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;             /* Medium */
+  font-size: 20px;              /* según Figma */
+  line-height: 40px;            /* según Figma */
+  letter-spacing: 0;            /* según Figma */
+
+  /* Caja de texto de hasta 1202px, centrada en la pantalla */
+  max-width: 1202px;
+  width: 100%;
+  margin: 0 auto 1.5rem;        /* auto centra la caja, y deja margen inferior */
+       
+}
+
+/* Botón redondeado */
+.hero-content .btn-learn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;             /* Medium */
+  border-radius: 20px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #213BA1;
+  border-color: #213BA1;
+  color:#fff;
+  font-size: 20px; 
+
+}
