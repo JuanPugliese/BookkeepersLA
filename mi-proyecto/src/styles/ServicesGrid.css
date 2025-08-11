@@ -1,9 +1,8 @@
-/* src/styles/Services.css */
+/* src/styles/ServicesGrid.css */
 
-/* Option 1 CSS */
-
+/* Title bar (igual en ambas opciones) */
 .services-title-bar {
-  background-color: #1f739d;
+  background-color: #213BA1;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
@@ -16,55 +15,12 @@
   font-size: 2rem;
 }
 
-.services-list-grid {
-  background-color: #fff;
-}
-
-.service-list-col {
-  display: flex;
-  align-items: flex-start;
-  margin-top: 4rem;
-}
-.service-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.service-list li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 1.3rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-  line-height: 1.6;
-}
-.service-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.4rem;
-  width: 6px;
-  height: 2rem;
-  background-color: #FFD800;
-}
-
-.service-photos-col {
-  display: flex;
-  gap: 2rem;
-  margin-top: 4rem;
-}
-.service-photo {
-  flex: 1;
-  border-radius: 20px;
-  object-fit: cover;
-  max-width: 100%;
-}
-
-/* Option 2 CSS (commented out)
-
+/* Grid container fondo */
 .services-grid {
   background-color: #fff;
 }
+
+/* Base de cada card */
 .service-card {
   position: relative;
   background-size: cover;
@@ -76,12 +32,16 @@
 .service-card:hover {
   transform: scale(1.03);
 }
+
+/* Overlay azul semitransparente */
 .service-overlay {
   position: absolute;
   inset: 0;
   background: rgba(35, 83, 239, 0.6);
   transition: opacity 0.3s;
 }
+
+/* Contenido de título */
 .service-content {
   position: absolute;
   left: 1rem;
@@ -89,27 +49,34 @@
   color: #ffffff;
   transition: opacity 0.3s;
 }
+/* Vista de título (baja) */
 .title-view {
   bottom: 1rem;
   opacity: 1;
 }
+/* Vista de descripción (oculta) */
 .desc-view {
   top: 50%;
   transform: translateY(-50%);
   opacity: 0;
 }
+/* Intercambio en hover */
 .service-card:hover .title-view {
   opacity: 0;
 }
 .service-card:hover .desc-view {
   opacity: 1;
 }
+
+/* Tamaños de las cards */
 .service-card-large {
   height: 300px;
 }
 .service-card-small {
   height: 200px;
 }
+
+/* Barra amarilla indicador */
 .service-bar {
   display: inline-block;
   width: 4px;
@@ -117,10 +84,10 @@
   background-color: #FFD800;
   margin-right: 0.5rem;
 }
+
+/* Párrafo dentro de la card */
 .service-content p {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
-
-*/

@@ -9,28 +9,34 @@ export default function About() {
     <section id="about" className="about-section py-5">
       <Container>
         <Row className="align-items-center">
-          {/* Columna de texto */}
-          <Col md={6}>
+          <Col md={6} className="about-content">
             <h2 className="about-title">About Us</h2>
             <div className="about-text">
               <p>
-                We provide reliable and accurate bookkeeping services tailored to small businesses. Our goal is to simplify
-                your financial processes, keep your books organized, and give you the clarity you
-                need to grow your business. With a commitment to professionalism and personalized
-                service, we’re here to help you save time, reduce stress, and focus on what you do best.
+                Bookkeepers of LA is a trusted bookkeeping firm dedicated to supporting small
+                businesses, entrepreneurs, and professionals across Los Angeles and beyond. We
+                specialize in providing accurate and up-to-date financial information, enabling our
+                clients to make informed decisions and stay focused on growing their businesses.
+                <br /><br />
+                Whether you need ongoing monthly bookkeeping, QuickBooks support, clean-up services,
+                or help preparing for tax time, we provide reliable, personalized solutions tailored
+                to your needs. At Bookkeepers of LA, we care about your success and treat your
+                business as if it were our own.
               </p>
               <span className="highlight">
                 Let us handle the numbers so you can focus on success!
               </span>
             </div>
           </Col>
-          {/* Columna de imagen */}
+
           <Col md={6} className="text-center mt-4 mt-md-0">
-            <img
-              src={aboutImg}
-              alt="About us"
-              className="about-image"
-            />
+            <div className="about-image-wrapper">
+              <img
+                src={aboutImg}
+                alt="About us"
+                className="about-image"
+              />
+            </div>
           </Col>
         </Row>
       </Container>

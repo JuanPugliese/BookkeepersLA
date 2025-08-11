@@ -1,24 +1,18 @@
-/* src/styles/Footer.css */
+:root { --primary-blue: #1f739d; }
+
+/* Barra de pie minimal */
 .main-footer {
-  background-color: #213BA1;
-  padding: 2rem 0;
+  color: #e9ecef;            /* o usa var(--primary-blue) si quieres fondo azul */
+  padding: 1rem 0;
+  border-top: 1px solid #e9ecef;
 }
-.footer-link a {
-  display: inline-flex;
-  align-items: center;
+
+/* Texto centrado */
+.footer-copy {
+  margin: 0;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #ffffff;
-  text-decoration: none;
-}
-.linkedin-icon {
-  height: 50px;
-  width: auto;
-  margin-right: 0.5rem;
-}
-.footer-seals .seal-image {
-  height: 100px;
-  margin-left: 1rem;
-  vertical-align: middle;
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #1f739d
 }

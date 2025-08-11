@@ -1,17 +1,14 @@
+// src/components/Navbar.js
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import logo from '../assets/LogoBookeepersLA.png';
+import logo from '../assets/LogoBookeepersLA1.png';
 import '../styles/Navbar.css';
 
 export default function MyNavbar() {
   return (
-    <Navbar
-      expand="lg"
-      fixed="top"
-      className="navbar-custom"
-    >
+    <Navbar expand="lg" fixed="top" className="navbar-custom">
       <Container>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#home">
           <img
             src={logo}
             alt="BookKeepers Logo"

@@ -1,19 +1,83 @@
 /* src/styles/ContactInfo.css */
-.contact-info-section {
-  background-color: #fff;
-  padding: 4rem 0;
+:root { --primary-blue: #1f739d; }
+
+.contact-info-section { background-color: #fff; }
+
+/* ===== Barra de título (igual a Our services) ===== */
+.contact-title-bar {
+  background-color: var(--primary-blue);
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
 }
-.contact-info-section .contact-details h3 {
+.contact-title-bar-text {
+  color: #fff;
+  margin: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: 2.25rem;
-  color: #000;
-  margin-bottom: 1rem;
+  font-size: 2rem;
 }
-.contact-info-section .contact-details p {
+
+/* Tipografía/espaciado compacto */
+.contact-item {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 35px;
   color: #000;
-  margin-bottom: 0.5rem;
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
+/* ===== Icono + sellos en una sola fila, alineados a la izquierda ===== */
+.contact-icons {
+  display: flex;
+  flex-direction: row;            /* ← ahora en fila */
+  align-items: center;
+  justify-content: flex-start;    /* alineados a la izquierda */
+  gap: 0.75rem;                   /* separación entre LinkedIn y sellos */
+  margin-top: 0.5rem;
+  flex-wrap: wrap;                /* por si no caben en móviles */
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Forzamos color del SVG (incluye hijos) */
+.linkedin-icon,
+.linkedin-icon * {
+  fill: var(--primary-blue) !important;
+  stroke: var(--primary-blue) !important;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+}
+
+/* Sellos (se mantienen en fila también) */
+.seal-row {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.seal-image {
+  width: 90px;
+  height: auto;
+}
+
+/* (Compat) Estilos previos que quizá usabas */
+.ContactUs-title-bar {
+  background-color: #1f739d;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+.ContactUs-title {
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
 }

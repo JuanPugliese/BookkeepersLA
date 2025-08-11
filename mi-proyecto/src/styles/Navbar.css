@@ -5,7 +5,7 @@
 }
 
 .navbar-custom .navbar-brand img {
-  height: 70px;               /* ajusta al tamaño que prefieras */
+  height: 150px;               /* ajusta al tamaño que prefieras */
   margin-right: 0.5rem;
 }
 
@@ -13,6 +13,7 @@
   margin: 0 1rem;
   font-weight: 500;
   color: #333333 !important;
+  font-size: 25px;
 }
 
 .navbar-custom .nav-link:hover {

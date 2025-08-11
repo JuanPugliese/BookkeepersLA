@@ -10,29 +10,40 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 40px;          /* tamaño fijo en px */
-  color: #213BA1;
+  color: #1f739d;
   text-align: center;
 
-  /* Eleva solo el título */
-  margin-top: -45px;        /* ajusta este valor hasta dejarlo a la altura deseada */
+  /* Quitamos el negativo y lo manejamos en el contenedor */
+  margin-top: 0;
   margin-bottom: 1.0rem;    /* separa el párrafo siguiente */
+}
+
+/* Empuja título + texto al mismo tiempo */
+.about-section .about-content {
+  padding-top: 24px;        /* ajusta este valor a tu gusto */
+}
+
+@media (min-width: 768px) {
+  .about-section .about-content {
+    padding-top: 40px;      /* un poco más en desktop */
+  }
 }
 
 .about-section .about-text {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;        /* Regular, o cambia a 500 si usas Roboto Medium */
-  font-size: 24px;         /* tamaño de fuente */
-  line-height: 40px;       /* altura de línea */
-  letter-spacing: 0;       /* espaciado de letra */
-  color: #000000;          /* negro puro */
-  
-  
+  font-weight: 100;         /* Regular, o cambia a 500 si usas Roboto Medium */
+  font-size: 24px;          /* tamaño de fuente */
+  line-height: 40px;        /* altura de línea */
+  letter-spacing: 0;        /* espaciado de letra */
+  color: #000000;           /* negro puro */
+
   /* Caja de texto de ancho fijo */
-  max-width: 650px;        /* tal como indica Figma */
-  width: 100%;             /* pero que se adapte en móviles */
-  
+  max-width: 650px;         /* tal como indica Figma */
+  width: 100%;              /* pero que se adapte en móviles */
+
   text-align: justify;
 }
+
 /* Frase final en negrita */
 .about-section .about-text .highlight {
   font-weight: 600;
@@ -40,11 +51,22 @@
   display: block;
 }
 
-/* Imagen con borde azul y esquinas redondeadas */
-.about-section .about-image {
+.about-image-wrapper {
   width: 100%;
-  max-width: 400px;
-  border: 8px solid #213BA1;
-  border-radius: 20px;
+  max-width: 320px;         /* mismo tamaño que antes */
+  margin: 0 auto;           /* centra en su columna */
+  border-radius: 37px;
+  overflow: hidden;         /* recorta todo lo que sobresalga */
+  background-color: transparent; /* asegúrate que no tenga color */
+}
+
+/* La imagen en sí sin bordes ni fondo */
+.about-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;             /* quita cualquier borde residual */
+  border-radius: 0;         /* sin radio aquí, lo controla el wrapper */
+  background: none;         /* cero background */
   object-fit: cover;
 }

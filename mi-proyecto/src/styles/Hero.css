@@ -15,8 +15,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  /* Azul 35,83,239 al 60% de opacidad */
-  background: rgba(35, 83, 239, 0.4);
+
 }
 
 /* Contenido encima del overlay */
@@ -44,8 +43,8 @@
 .hero-content p {
   /* Tipografía Roboto Medium 24px */
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;             /* Medium */
-  font-size: 20px;              /* según Figma */
+  font-weight: 500;             /* Medium */
+  font-size: 24px;              /* según Figma */
   line-height: 40px;            /* según Figma */
   letter-spacing: 0;            /* según Figma */
 
@@ -63,8 +62,10 @@
   border-radius: 20px;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background-color: #213BA1;
-  border-color: #213BA1;
+  background-color: #1f739d;
+  /* background-color: #213BA!; 
+  border-color: #213BA1; */
+  border-color: #1f739d;
   color:#fff;
   font-size: 20px; 
 
