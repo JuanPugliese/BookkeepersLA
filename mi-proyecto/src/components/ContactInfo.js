@@ -21,7 +21,7 @@ export default function ContactInfo() {
         <p className="contact-item">(661) 373-6712</p>
         <p className="contact-item">Valencia, CA</p>
 
-        {/* LinkedIn a la izquierda + sellos a la derecha */}
+        {/* LinkedIn + sellos centrados */}
         <div className="contact-icons">
           <a
             href="https://www.linkedin.com/in/jimena-falabella"
@@ -31,7 +31,8 @@ export default function ContactInfo() {
             aria-label="LinkedIn"
             title="LinkedIn"
           >
-            <LinkedinLogo className="linkedin-icon" width={36} height={36} />
+            {/* Sin width/height props; el tamaño lo maneja el CSS (140x140) */}
+            <LinkedinLogo className="linkedin-icon" />
           </a>
 
           <div className="seal-row">
