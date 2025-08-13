@@ -1,9 +1,12 @@
-/* src/styles/Hero.css */
+/* ================== Hero ================== */
+/* Fondo desde /public (mejor para preload y LCP) */
 .hero-section {
   position: relative;
+  background-image: url('/hero.webp');          /* principal (WebP) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   min-height: clamp(480px, 80vh, 900px);
   display: flex;
   align-items: center;
@@ -11,15 +14,20 @@
   padding: 4rem 1rem;
 }
 
-/* Overlay azul para contraste (ajustado a 0.30–0.20 como pediste) */
+/* Fallback a JPG si el navegador no soporta WebP (opcional) */
+@supports not (background-image: url("image.webp")) {
+  .hero-section { background-image: url('/hero.jpg'); }
+}
+
+/* Overlay azul para contraste */
 .hero-section::before {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(31,115,157,0.30) 0%,
-    rgba(31,115,157,0.20) 100%
+    rgba(31, 115, 157, 0.30) 0%,
+    rgba(31, 115, 157, 0.20) 100%
   );
   pointer-events: none;
 }
@@ -72,8 +80,8 @@
 }
 .hero-content .btn-learn:hover,
 .hero-content .btn-learn:focus {
-  background-color: var(--primary-blue-600);
-  border-color: var(--primary-blue-600);
+  background-color: #195c7d; /* var(--primary-blue-600) si la tienes global */
+  border-color: #195c7d;
   transform: translateY(-1px);
 }
 
