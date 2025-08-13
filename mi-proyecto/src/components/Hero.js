@@ -20,7 +20,15 @@ export default function Hero() {
           we help businesses stay organized, compliant, and financially healthy. Focus on what
           you do best while we take care of the numbers!
         </p>
-        <Button variant="light" className="btn-learn">
+
+        {/* Enlace ancla al About */}
+        <Button
+          as="a"
+          href="#about"
+          variant="light"
+          className="btn-learn"
+          aria-label="Learn more about us"
+        >
           Learn more!
         </Button>
       </div>

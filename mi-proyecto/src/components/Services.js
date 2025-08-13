@@ -67,53 +67,6 @@ export default function Services() {
           </Col>
         </Row>
       </Container>
-
-      {/**
-      // Option 2: Grid of Cards
-      <div className="services-title-bar">
-        <h2 className="services-title">Our services</h2>
-      </div>
-      <Container>
-        <Row className="mt-4">
-          {titlesLarge.map((title, idx) => (
-            <Col lg={4} md={6} key={idx} className="mb-4">
-              <div
-                className="service-card service-card-large"
-                style={{ backgroundImage: `url(${[service1, service2, service3][idx]})` }}
-              >
-                <div className="service-overlay" />
-                <div className="service-content title-view">
-                  <span className="service-bar" />
-                  <p>{title}</p>
-                </div>
-                <div className="service-content desc-view">
-                  <p>{descLarge[idx]}</p>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-        <Row className="mt-4">
-          {titlesSmall.map((title, idx) => (
-            <Col lg={3} md={6} key={idx} className="mb-4">
-              <div
-                className="service-card service-card-small"
-                style={{ backgroundImage: `url(${[service4, service5, service6, service7][idx]})` }}
-              >
-                <div className="service-overlay" />
-                <div className="service-content title-view">
-                  <span className="service-bar" />
-                  <p>{title}</p>
-                </div>
-                <div className="service-content desc-view">
-                  <p>{descSmall[idx]}</p>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-      **/}
     </section>
   );
 }

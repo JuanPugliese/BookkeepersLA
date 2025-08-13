@@ -24,7 +24,7 @@ export default function ContactInfo() {
         {/* LinkedIn + sellos centrados */}
         <div className="contact-icons">
           <a
-            href="https://www.linkedin.com/in/jimena-falabella"
+            href="https://www.linkedin.com/in/jimena-falabella-0707b4306/"
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin-link"
