@@ -17,8 +17,8 @@ export default function ContactInfo() {
 
       {/* Contenido */}
       <Container className="text-center py-3">
-        <p className="contact-item">jimena@bookkeepersofla.com</p>
-        <p className="contact-item">(661) 373-6712</p>
+        <p className="contact-item"><a href="mailto:jimena@bookkeepersofla.com">jimena@bookkeepersofla.com</a></p>
+        <p className="contact-item"><a href="tel:+16613736712">(661) 373-6712</a></p>
         <p className="contact-item">Valencia, CA</p>
 
         {/* LinkedIn + sellos centrados */}
@@ -32,14 +32,14 @@ export default function ContactInfo() {
             title="LinkedIn"
           >
             {/* Sin width/height props; el tamaño lo maneja el CSS (140x140) */}
-            <LinkedinLogo className="linkedin-icon" />
+            <LinkedinLogo className="linkedin-icon" aria-hidden="true" focusable="false"  />
           </a>
 
           <div className="seal-row">
-            <img src={seal1} alt="Seal 1" className="seal-image" />
-            <img src={seal2} alt="Seal 2" className="seal-image" />
-            <img src={seal3} alt="Seal 3" className="seal-image" />
-            <img src={seal4} alt="Seal 4" className="seal-image" />
+            <img src={seal1} alt="Certification badge 1" className="seal-image" loading="lazy" decoding="async" />
+            <img src={seal2} alt="Certification badge 2" className="seal-image" loading="lazy" decoding="async" />
+            <img src={seal3} alt="Certification badge 3" className="seal-image" loading="lazy" decoding="async" />
+            <img src={seal4} alt="Certification badge 4" className="seal-image" loading="lazy" decoding="async" />
           </div>
         </div>
       </Container>

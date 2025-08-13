@@ -1,7 +1,7 @@
 // src/components/Hero.js
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import heroBg from '../assets/fondo.jpg';
+import heroBg from '../assets/fondo.webp';
 import '../styles/Hero.css';
 
 export default function Hero() {

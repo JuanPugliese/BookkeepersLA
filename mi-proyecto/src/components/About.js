@@ -35,6 +35,8 @@ export default function About() {
                 src={aboutImg}
                 alt="About us"
                 className="about-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </Col>

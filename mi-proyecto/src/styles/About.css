@@ -44,6 +44,7 @@
   border-radius: 37px;
   overflow: hidden;
   background-color: transparent;
+  aspect-ratio: 4 / 5;
 }
 
 .about-image {

@@ -3,13 +3,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import photoA from '../assets/service4.png';
 import photoB from '../assets/service6.png';
-import service1 from '../assets/service1.png';
-import service2 from '../assets/service2.png';
-import service3 from '../assets/service3.png';
-import service4 from '../assets/service4.png';
-import service5 from '../assets/service5.png';
-import service6 from '../assets/service6.png';
-import service7 from '../assets/service7.png';
 import '../styles/Services.css';
 
 export default function Services() {
@@ -62,8 +55,8 @@ export default function Services() {
             </ul>
           </Col>
           <Col lg={6} className="service-photos-col">
-            <img src={photoA} alt="Financial reporting" className="service-photo" />
-            <img src={photoB} alt="QuickBooks setup" className="service-photo" />
+            <img src={photoA} alt="Financial reporting" className="service-photo" loading="lazy" decoding="async" />
+            <img src={photoB} alt="QuickBooks setup" className="service-photo" loading="lazy" decoding="async" />
           </Col>
         </Row>
       </Container>
