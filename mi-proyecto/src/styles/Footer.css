@@ -1,18 +1,16 @@
-:root { --primary-blue: #1f739d; }
+/* Footer-css */
 
-/* Barra de pie minimal */
 .main-footer {
-  color: #e9ecef;            /* o usa var(--primary-blue) si quieres fondo azul */
+  color: #e9ecef;
   padding: 1rem 0;
   border-top: 1px solid #e9ecef;
 }
 
-/* Texto centrado */
 .footer-copy {
   margin: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 0.95rem;
-  color: #1f739d
+  color: var(--primary-blue);
 }
+

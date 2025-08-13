@@ -1,21 +1,23 @@
+/* src/styles/Navbar.css */
 .navbar-custom {
-  background-color: #ffffff;  /* fondo blanco */
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 0.75rem 1rem;
 }
 
 .navbar-custom .navbar-brand img {
-  height: 150px;               /* ajusta al tamaño que prefieras */
+  height: 64px;           /* tamaño estándar */
   margin-right: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-custom .navbar-brand img { height: 80px; } /* más grande en desktop */
 }
 
 .navbar-custom .nav-link {
   margin: 0 1rem;
   font-weight: 500;
   color: #333333 !important;
-  font-size: 25px;
+  font-size: 20px;
 }
-
-.navbar-custom .nav-link:hover {
-  color: #0056b3 !important;
-}
+.navbar-custom .nav-link:hover { color: var(--primary-blue) !important; }

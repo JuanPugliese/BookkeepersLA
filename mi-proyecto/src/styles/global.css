@@ -1,0 +1,67 @@
+/* ========= Global (variables, accesibilidad, tipografía, utilidades) ========= */
+:root {
+  --primary-blue: #1f739d;
+  --primary-blue-600: #195c7d;
+  --bg: #ffffff;
+  --text: #000000;
+
+  /* Altura de la navbar fija (ajústala si cambia tu navbar) */
+  --nav-offset: 72px;
+}
+
+/* Reset básico + tipografía */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Evita que la navbar fija tape el inicio de la página */
+body { padding-top: var(--nav-offset); }
+
+/* Cualquier ancla (#about, etc.) aterriza con margen para la navbar */
+section[id] { scroll-margin-top: var(--nav-offset); }
+
+/* Imágenes responsivas por defecto */
+img { max-width: 100%; height: auto; display: block; }
+
+/* Enlaces */
+a { color: var(--primary-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Foco visible (accesibilidad teclado) */
+:focus-visible {
+  outline: 3px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+a:focus-visible, button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(31,115,157,.35);
+}
+
+/* Respeta usuarios que prefieren menos animación */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link para lectores de pantalla/teclado */
+.skip-link { position: absolute; left: -9999px; top: auto; }
+.skip-link:focus {
+  left: 1rem; top: 1rem; z-index: 10000;
+  background: #fff; color: #000;
+  padding: .5rem 1rem; border: 2px solid var(--primary-blue); border-radius: .5rem;
+}
+
+/* Títulos (baseline) – puedes ajustar por sección */
+h1, h2, h3 { letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.75rem, 3.2vw, 40px); font-weight: 700; color: var(--primary-blue); }
