@@ -5,10 +5,15 @@ import '../styles/Hero.css';
 
 export default function Hero() {
   return (
-    <section id="home" className="hero-section">
+    <section
+      id="home"
+      className="hero-section"
+      // WebP con fallback a JPG: si WebP no es soportado, usa la segunda URL
+      style={{ backgroundImage: 'url(/hero.webp), url(/hero.jpg)' }}
+    >
       <div className="hero-content">
         <h1 className="text-center">
-          Accurate Books, <br/> Stress-Free Finances!
+          Accurate Books, <br /> Stress-Free Finances!
         </h1>
         <p>
           Managing your finances shouldn’t be a headache. With our expert bookkeeping

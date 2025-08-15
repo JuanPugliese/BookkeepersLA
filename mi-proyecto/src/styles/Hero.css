@@ -2,7 +2,6 @@
 /* Fondo desde /public (mejor para preload y LCP) */
 .hero-section {
   position: relative;
-  background-image: url('/hero.webp');          /* principal (WebP) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,11 +11,6 @@
   align-items: center;
   justify-content: center;
   padding: 4rem 1rem;
-}
-
-/* Fallback a JPG si el navegador no soporta WebP (opcional) */
-@supports not (background-image: url("image.webp")) {
-  .hero-section { background-image: url('/hero.jpg'); }
 }
 
 /* Overlay azul para contraste */

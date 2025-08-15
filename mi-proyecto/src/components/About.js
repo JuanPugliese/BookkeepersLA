@@ -35,6 +35,8 @@ export default function About() {
                 src={aboutImg}
                 alt="About us"
                 className="about-image"
+                width="673"
+                height= "896"
                 loading="lazy"
                 decoding="async"
               />
