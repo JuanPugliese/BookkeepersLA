@@ -1,16 +1,30 @@
-/* ================== Hero ================== */
-/* Fondo desde /public (mejor para preload y LCP) */
+/* ================== Hero (full-bleed y sin franjas blancas) ================== */
 .hero-section {
   position: relative;
+
+  /* 🔑 Rompe el contenedor y ocupa todo el ancho de la ventana */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  /* Fondo */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 
-  min-height: clamp(480px, 80vh, 900px);
+  /* Alto mínimo cómodo en móvil (svh para iOS/Android modernos + fallback) */
+  min-height: 100svh;
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1rem;
+
+  /* Sin padding lateral para evitar “bordes”; solo vertical */
+  padding: clamp(2rem, 6vh, 4rem) 0;
+
+  /* Evita cualquier desbordamiento horizontal por 100vw */
+  overflow: hidden;
 }
 
 /* Overlay azul para contraste */
@@ -30,9 +44,8 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 1rem;
+  width: min(100%, 1200px);
+  padding: 0 1rem;              /* respiro solo al texto */
   text-align: center;
   color: #fff;
   text-shadow: 0 2px 10px rgba(0,0,0,0.35);
@@ -79,7 +92,8 @@
   transform: translateY(-1px);
 }
 
+/* Ajustes finos en pantallas angostas */
 @media (max-width: 576px) {
-  .hero-section { padding: 3rem 1rem; }
+  .hero-content { padding: 0 0.75rem; }
   .hero-content p { font-size: 18px; line-height: 32px; }
 }

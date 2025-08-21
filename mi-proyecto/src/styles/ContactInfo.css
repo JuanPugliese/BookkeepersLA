@@ -1,5 +1,7 @@
-/* src/styles/ContactInfo.css */
-.contact-info-section { background-color: #fff; }
+/* ===================== Contact Info ===================== */
+.contact-info-section { 
+  background-color: #fff; 
+}
 
 /* Barra de título (coherente con Services) */
 .contact-title-bar {
@@ -12,57 +14,82 @@
   color: #fff;
   margin: 0;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
 }
 
-/* Tipografía/espaciado compacto */
+/* Texto de contacto */
 .contact-item {
   font-weight: 300;
-  font-size: 35px;
+  font-size: clamp(1.125rem, 4.5vw, 2.1875rem); /* 18px–35px */
   color: #000;
   margin: 0.25rem 0;
   line-height: 1.4;
+  text-align: center;
 }
-.contact-item a { color: inherit; text-decoration: none; }
-.contact-item a:hover { text-decoration: underline; }
+.contact-item a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+.contact-item a:hover { 
+  text-decoration: underline; 
+}
 
-/* Icono + sellos centrados */
+/* --- Apilar LinkedIn encima de los sellos --- */
 .contact-icons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;                /* LinkedIn arriba, sellos abajo */
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-  flex-wrap: wrap;
+  gap: clamp(0.75rem, 2.5vw, 1.25rem);
+  margin-top: clamp(0.5rem, 2.5vw, 1rem);
 }
 
 .linkedin-link {
+  order: 1;                              /* primero LinkedIn */
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Tamaño grande del logo */
-.linkedin-icon { width: 140px; height: 140px; }
+/* Tamaño del logo de LinkedIn (SVG) */
+.linkedin-icon { 
+  width: clamp(100px, 20vw, 140px); 
+  height: auto; 
+}
 
-/* Color del SVG y sus hijos */
-.linkedin-icon, .linkedin-icon * {
+/* Forzar color del SVG (si aplica) */
+.linkedin-icon, 
+.linkedin-icon * {
   fill: var(--primary-blue) !important;
   stroke: var(--primary-blue) !important;
 }
 
-/* Sellos en fila, también centrados */
+/* Sellos centrados debajo */
 .seal-row {
+  order: 2;                              /* luego los sellos */
+  width: 100%;
   display: flex;
-  gap: 0.6rem;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  margin-top: clamp(0.5rem, 2vw, 0.75rem);
 }
-.seal-image { width: 90px; height: auto; }
 
-/* Compat antiguos (si se usan en markup) */
+/* Tamaño de cada sello */
+.seal-image { 
+  width: clamp(70px, 16vw, 90px); 
+  height: auto; 
+}
+
+/* Evitar desbordes de imágenes/SVG dentro de la sección */
+.contact-info-section img, 
+.contact-info-section svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Compatibilidad con estilos antiguos (si el markup los usa) ===== */
 .ContactUs-title-bar {
   background-color: var(--primary-blue);
   width: 100%;
@@ -73,5 +100,5 @@
   color: #ffffff;
   margin: 0;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
 }

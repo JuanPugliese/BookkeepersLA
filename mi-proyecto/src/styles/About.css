@@ -1,16 +1,18 @@
-/* src/styles/About.css */
+/* ================== About (mejor legibilidad en móvil) ================== */
 
-/* Contenedor principal de About */
-.about-section { background-color: #fff; }
+/* Contenedor principal */
+.about-section {
+  background-color: #fff;
+  padding-block: clamp(2rem, 6vw, 3rem);
+}
 
-/* Título azul Roboto Bold */
+/* Título */
 .about-section .about-title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: clamp(1.75rem, 3.8vw, 2.5rem);  /* 28px → 40px */
   color: var(--primary-blue);
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
 
 /* Empuja título + texto al mismo tiempo */
@@ -19,15 +21,33 @@
   .about-section .about-content { padding-top: 40px; }
 }
 
+/* Texto: más pequeño y sin justificado en móvil (evita “ríos” de espacios) */
 .about-section .about-text {
-  font-weight: 300;                 /* más legible que 100 */
-  font-size: 24px;
-  line-height: 40px;
+  font-weight: 300;
+  font-size: clamp(1rem, 2.7vw, 1.125rem);   /* 16px → 18px en móvil/tablet */
+  line-height: 1.75;                         /* ~28–32px según tamaño */
   letter-spacing: 0;
   color: var(--text);
   max-width: 650px;
   width: 100%;
-  text-align: justify;
+  text-align: left;                           /* 🔑 móvil */
+  text-wrap: pretty;
+  hyphens: auto;
+  margin-inline: auto;
+}
+
+/* En escritorios volvemos al look de Figma (más grande y justificado) */
+@media (min-width: 992px) {
+  .about-section .about-text {
+    font-size: 22px;       /* si prefieres 24px, súbelo sin problema */
+    line-height: 36px;     /* o 40px si usas 24px */
+    text-align: justify;
+  }
+}
+
+/* Espaciado de párrafos dentro del bloque de texto */
+.about-section .about-text p {
+  margin: 0 0 1rem 0;
 }
 
 /* Frase final en negrita */
@@ -37,6 +57,7 @@
   display: block;
 }
 
+/* Imagen */
 .about-image-wrapper {
   width: 100%;
   max-width: 320px;
@@ -46,7 +67,6 @@
   background-color: transparent;
   aspect-ratio: 673 / 896;
 }
-
 .about-image {
   display: block;
   width: 100%;

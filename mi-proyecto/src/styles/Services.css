@@ -1,24 +1,31 @@
 /* src/styles/Services.css */
 
+/* Barra azul */
 .services-title-bar {
   background-color: var(--primary-blue);
   width: 100%;
   text-align: center;
   padding: 1rem 0;
+  margin: 0;                    /* sin márgenes extra */
 }
 .services-title {
-  color: #ffffff;
+  color: #fff;
   margin: 0;
   font-weight: 700;
   font-size: 2rem;
 }
 
-.services-list-grid { background-color: #fff; }
+/* Contenido */
+.services-list-grid {
+  background-color: #fff;
+}
 
+/* Columna de lista */
 .service-list-col {
   display: flex;
   align-items: flex-start;
-  margin-top: 4rem;
+  /* antes 4rem: en móvil daba “franja” de aire bajo el título */
+  margin-top: clamp(0.75rem, 2.5vw, 2rem);
 }
 
 .service-list {
@@ -29,28 +36,52 @@
 .service-list li {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 1.3rem;
-  font-size: 25px;
+  margin-bottom: 1.1rem;
+  font-size: clamp(1rem, 2.6vw, 1.25rem); /* 16–20px */
   line-height: 1.6;
 }
 .service-list li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 0.4rem;
+  top: 0.45em;                 /* alineación del “palo” amarillo */
   width: 6px;
-  height: 2rem;
+  height: 1.6em;
   background-color: #FFD800;
 }
 
+/* Columna de fotos */
 .service-photos-col {
   display: flex;
-  gap: 2rem;
-  margin-top: 4rem;
+  gap: clamp(0.75rem, 2.5vw, 2rem);
+  margin-top: clamp(1rem, 3vw, 2.5rem);  /* menos aire en móvil */
+  flex-wrap: wrap;                        /* permite saltar de línea */
 }
+
+/* Imágenes */
 .service-photo {
-  flex: 1;
+  display: block;              /* evita el espacio extra de img inline */
+  width: 100%;
+  max-width: 100%;
   border-radius: 20px;
   object-fit: cover;
-  max-width: 100%;
+  /* asegura alto consistente y evita que “invadan” la barra */
+  aspect-ratio: 272 / 350;     /* proporción real de tus fotos */
+}
+
+/* ——— Responsivo ——— */
+@media (max-width: 767.98px) {
+  /* dos columnas limpias en móvil */
+  .service-photo {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .service-list-col { margin-top: 2.5rem; }
+  .service-photos-col { flex-wrap: nowrap; }
+  .service-photo {
+    flex: 1;
+    aspect-ratio: auto;        /* en desktop dejamos que fluya */
+  }
 }
