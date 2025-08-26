@@ -1,1 +1,10 @@
+# HTTP -> HTTPS y canónico a www
+http://bookkeepersofla.com/*        https://www.bookkeepersofla.com/:splat  301!
+http://www.bookkeepersofla.com/*    https://www.bookkeepersofla.com/:splat  301!
+
+# Si alguien entra al apex en HTTPS, lo mandamos a www también
+https://bookkeepersofla.com/*       https://www.bookkeepersofla.com/:splat  301!
+
+# (tu regla SPA al final)
+# Single-page app
 /*  /index.html  200
