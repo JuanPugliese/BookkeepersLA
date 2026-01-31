@@ -1,15 +1,14 @@
 // src/components/About.js
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import aboutImg from '../assets/about.jpg';
 import '../styles/About.css';
 
 export default function About() {
   return (
     <section id="about" className="about-section py-5">
       <Container>
-        <Row className="align-items-center">
-          <Col md={6} className="about-content">
+        <Row className="justify-content-center">
+          <Col md={10} lg={8} className="about-content text-center">
             <h2 className="about-title">About Us</h2>
             <div className="about-text">
               <p>
@@ -26,20 +25,6 @@ export default function About() {
               <span className="highlight">
                 Let us handle the numbers so you can focus on success!
               </span>
-            </div>
-          </Col>
-
-          <Col md={6} className="text-center mt-4 mt-md-0">
-            <div className="about-image-wrapper">
-              <img
-                src={aboutImg}
-                alt="About us"
-                className="about-image"
-                width="673"
-                height= "896"
-                loading="lazy"
-                decoding="async"
-              />
             </div>
           </Col>
         </Row>
